@@ -334,7 +334,9 @@ button:focus-visible, [tabindex]:focus-visible, input:focus-visible, select:focu
   display:flex; align-items:flex-start; gap:14px; padding:16px 18px;
   border:1px solid var(--line); border-radius:var(--radius); background: var(--bg-panel);
   transition: all .12s; text-align:left; min-height:52px; width:100%;
+  color: var(--ink); font-family: var(--sans); cursor: pointer;
 }
+.option:disabled{ opacity: 1; color: var(--ink); cursor: default; }
 .option:hover:not(.locked){ border-color: var(--blue-dim); background: var(--bg-panel-raised); transform: translateX(2px); }
 .option.selected{ border-color: var(--blue); background: var(--blue-glow); box-shadow: 0 0 0 1px var(--blue); }
 .option-letter{
@@ -343,7 +345,7 @@ button:focus-visible, [tabindex]:focus-visible, input:focus-visible, select:focu
   color: var(--ink-faint);
 }
 .option.selected .option-letter{ background: var(--blue); color:#0d1a24; border-color:var(--blue); }
-.option-text{ font-size:14.5px; line-height:1.5; padding-top:3px; }
+.option-text{ font-size:14.5px; line-height:1.5; padding-top:3px; color: var(--ink); }
 
 .option.correct{ border-color: var(--green); background: var(--green-glow); box-shadow: 0 0 0 1px var(--green); }
 .option.correct .option-letter{ background: var(--green); color:#1c0f08; border-color:var(--green); }
